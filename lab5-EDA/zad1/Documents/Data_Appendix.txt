@@ -1,0 +1,44 @@
+Data Appendix
+==============================================
+1. drinks.csv
+a.	country
+Definition: authonomic region with own laws
+Name of original data file: drinks.csv: country
+Number of observations: 193 non-null object
+
+b.	beer_servings
+Definition: Servings are standardized volumes of liquid. Number of type of servings consumed in country (in integer number)
+Name of original data file: drinks.csv: beer_servings
+Number of observations: 193 non-null int64
+
+c.	spirit_servings
+Definition: Servings are standardized volumes of liquid. Number of type of servings consumed in country (in integer number)
+Name of original data file: drinks.csv: spirit_servings
+Number of observations: 193 non-null int64
+
+d.	wine_servings
+Definition: Servings are standardized volumes of liquid. Number of type of servings consumed in country (in integer number)
+Name of original data file: drinks.csv: wine_servings
+Number of observations: 193 non-null int64
+
+e.	total_litres_of_pure_alcohol
+Definition: Summarized number of total alcohol derived from aforementioned servings
+Name of original data file: drinks.csv: total_litres_of_pure_alcohol
+Number of observations: 193 non-null float64
+
+================================================
+
+2. df_tidy.csv
+a.	country
+Definition: authonomic region with own laws
+Name of original data file: drinks.csv: country
+Number of observations: 579 non-null object
+b.	variable
+Definition: type of alcohol servings
+Name of original data file: drinks.csv: *_servings
+Number of observations: 579 non-null objects
+c.	value
+Definition: number of type of servings
+Name of original data file: drinks.csv: *_servings
+Number of observations: 579 non-null int64
+

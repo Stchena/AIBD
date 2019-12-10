@@ -1,0 +1,41 @@
+1. SELECT COUNT(DISTINCT name) FROM category				Returns: 16
+
+2. SELECT name FROM category 
+	ORDER BY name
+
+3. Dla Min:
+	SELECT * from film, inventory, rental
+		WHERE inventory.inventory_id = rental.inventory_id
+		ORDER BY rental.rental_date asc limit 1						returns Chamber Italian
+	Dla Max:
+	SELECT * from film, inventory, rental
+		WHERE inventory.inventory_id = rental.inventory_id
+		ORDER BY rental.rental_date desc limit 1					returns Chamber Italian
+
+4. SELECT COUNT(rental_id)
+	FROM rental
+	WHERE rental_date BETWEEN '2005-07-01' AND '2005-08-01'			returns 6709
+	
+5. SELECT COUNT(rental_id)
+	FROM rental
+	WHERE rental_date BETWEEN '2010-01-01' AND '2011-02-01'			returns 0
+	
+6. SELECT amount from payment
+  	ORDER BY payment.amount desc limit 1							returns 11.99
+	
+7. joinowac tabele selectem bez joinowania
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

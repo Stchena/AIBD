@@ -1,0 +1,43 @@
+1. znajdz wypozyczalnie o najmniejszej liczbie klientow
+SELECT store.*, COUNT(rental.customer_id)
+	FROM store
+	INNER JOIN staff
+		ON store.store_id = staff.store_id
+	INNER JOIN rental
+		ON staff.staff_id = rental.staff_id
+	GROUP BY store.store_id
+	ORDER BY COUNT(rental.customer_id) ASC
+	LIMIT 1
+==============================================
+2. 
+SELECT *
+	FROM film
+	WHERE film_id BETWEEN 4 AND 15
+3.
+SELECT store.*, COUNT(rental.customer_id)
+	FROM store
+	INNER JOIN staff
+		ON store.store_id = staff.store_id
+	INNER JOIN rental
+		ON staff.staff_id = rental.staff_id
+	GROUP BY store.store_id
+	ORDER BY COUNT(rental.customer_id) DESC
+	LIMIT 1
+4.
+SELECT AVG(amount)
+	FROM payment
+5.
+SELECT AVG(film.length)
+	FROM film
+	INNER JOIN inventory
+		ON film.film_id = inventory.film_id
+	INNER JOIN rental 
+		ON inventory.inventory_id = rental.inventory_id
+6.
+SELECT SUM(film.length)
+	FROM film
+	INNER JOIN film_category
+		ON film.film_id = film_category.film_id
+	INNER JOIN category
+	ON film_category.category_id = category.category_id
+	WHERE category.name = 'Action'

@@ -1,0 +1,46 @@
+1. Znajdź wszystkie nazwy krajów rozpoczynających się na P.
+SELECT country.country 
+	FROM country
+	WHERE country.country LIKE 'P%'
+=================================================================
+2. Znajdź wszystkie nazwy krajów rozpoczynających się P i kończących na s.
+SELECT country.country 
+	FROM country
+	WHERE country.country LIKE 'P%s'
+=====================================================
+3. Znajdź wszystkie tytuły filmów, w których znajdują się cyfry.
+SELECT film.title
+	FROM film
+	WHERE film.title SIMILAR TO '%[0-9.]%'
+=====================================================
+4. Znajdź wszystkich pracowników z podwójnym imieniem lub nazwiskiem.
+SELECT staff.first_name, staff.last_name
+	FROM staff
+	WHERE first_name SIMILAR TO '.+ .+'
+	OR last_name SIMILAR TO '.+[-:space:].+'
+=====================================================
+5. Znajdź wszystkie nazwiska aktorów rozpoczynających się od P lub C i mających 5 znaków
+SELECT actor.last_name
+	FROM actor
+	WHERE actor.last_name LIKE 'P____' 
+	OR actor.last_name LIKE 'C___'
+=====================================================
+6. Znajdź wszystkie tytuły filmów, w których występują słowa Trip lub Alone
+SELECT film.title 
+	FROM film
+	WHERE film.title SIMILAR TO '%Trip%'
+	OR film.title SIMILAR TO '%Alone%'
+=====================================================
+7. Przeanalizuj zapytania:
+
+    select first_name from actor where first_name ~ '^Al [a: z, 1: 9] *'
+	wybiera imie aktora ktore zaczyna sie od Al i pozniej ma litery od a do z, lub liczby od 1 do 9, 0 lub wiecej razy
+    select first_name from actor where first_name ~* '^al [a: z, 1: 9] *'
+	wybiera imie aktora ktore NIE zaczyna sie od al (i potem zawiera cos tam)
+
+
+	
+	
+	
+	
+	
